@@ -5188,8 +5188,8 @@ textarea {
 }
 .grid-container {
   columns: 5 200px;
-  column-gap: .001rem;
+  column-gap: 0.001rem;
   width: 90%;
   margin: 0 auto;
 }
-/* started with a template from mashup templates (univers) then edited as liked and added few pages*\
+/* started with a template from mashup templates (univers) then edited as liked and added few pages*/
