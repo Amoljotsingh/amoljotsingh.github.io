@@ -1,0 +1,23 @@
+.header {
+  background-image: url(../asserts/misc/AmoljotSingh.png);
+  contain: content;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.single-img {
+  padding: 0 5px 5px;
+  filter: grayscale();
+}
+
+.single-img:hover {
+  filter: grayscale(0);
+  transition: 0.25s;
+}
+
+.grid-container {
+  columns: 5 200px;
+  column-gap: 0.001rem;
+  width: 90%;
+  margin: 0 auto;
+}
