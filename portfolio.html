@@ -10,20 +10,20 @@
 
     <link href="style/style.css" rel="stylesheet" />
   </head>
-  <!--oncontextmenu="return false;"-->
-  <body style="background-color: black">
-    <header>
-      <nav>
-        <li>
-          <a style="font-size: large; color: white" href="index.html">Home</a>
-        </li>
-        <li>
-          <a style="font-size: large; color: white" href="portfolio.html"
-            >Portfolio</a
-          >
-        </li>
-        <li><a style="font-size: large; color: white" href="cv.html">CV</a></li>
-      </nav>
+
+  <body oncontextmenu="return false;" style="background-color: black">
+    <header class="wrapper-nav" style="padding: 1.5rem">
+      <div>
+        <a class="padded" style="color: white" href="index.html">Home</a>
+      </div>
+      <div>
+        <a class="padded" style="color: white" href="portfolio.html"
+          >Portfolio
+        </a>
+      </div>
+      <div>
+        <a class="padded" style="color: white" href="cv.html">CV</a>
+      </div>
     </header>
     <main>
       <div class="grid-container">
@@ -225,5 +225,10 @@
         </div>
       </div>
     </main>
+    <footer class="wrapper">
+      <div style="color: white">
+        Images are subject to copyright &#169; Amoljot Singh 2022
+      </div>
+    </footer>
   </body>
 </html>
