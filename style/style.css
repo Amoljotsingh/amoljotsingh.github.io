@@ -1,31 +1,29 @@
 body{
   margin: 0;
+  background-color: rgb(10, 10, 10);
 }
 .header {
   background-image: url(../asserts/misc/AmoljotSingh.png);
   height:100vh;
-  width:100%;
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
   background-color: red;
-  position: relative;
 }
 .single-img {
   padding: 0 5px 5px;
   filter: grayscale();
 }
-
 .single-img:hover {
   filter: grayscale(0);
   transition: 0.25s;
 }
-
 .grid-container {
   columns: 5 200px;
   column-gap: 0.001rem;
   width: 90%;
   margin: 0 auto;
+  padding: 1.1rem;
 }
 .designation {
   background: black;
@@ -46,7 +44,7 @@ body{
 }
 .wrapper-nav {
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
   background-color: black;
   padding: 1.5rem;
@@ -55,22 +53,12 @@ body{
   padding: 1.25rem;
   font-size: 1.5rem;
   text-decoration: none;
-}
-.glass-morphism {
-  background: rgba(0, 0, 0, 0.25);
-  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 10px;
+  color: white;
 }
 .links {
   text-decoration: none;
-  color: black;
-  background: orange;
+  color: white;
+  background: red;
   padding: 10px;
-  margin: 1.25rem;
-}
-.isolated {
-  padding: 1.2rem;
   margin: 1.25rem;
 }
