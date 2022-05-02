@@ -44,10 +44,12 @@ body{
 }
 .wrapper-nav {
   display: flex;
-  justify-content:space-around;
-  align-items: center;
+  /* justify-content:space-around; */
+  /* align-items: center; */
+  width: 100vw;
   background-color: black;
   padding: 1.5rem;
+  float: left;
 }
 .padded {
   padding: 1.25rem;
@@ -61,4 +63,15 @@ body{
   background: red;
   padding: 10px;
   margin: 1.25rem;
+}
+.cv {
+  background: black;
+  padding: 1%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: absolute;
+  bottom: 2%
 }
