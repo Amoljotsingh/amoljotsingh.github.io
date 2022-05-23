@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<url>
+  <loc>https://amol.studio/</loc>
+  <lastmod>2022-05-03T07:13:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://amol.studio/index.html</loc>
+  <lastmod>2022-05-03T07:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://amol.studio/portfolio.html</loc>
+  <lastmod>2022-05-03T07:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://amol.studio/cv.html</loc>
+  <lastmod>2022-05-03T07:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://amol.studio/downloads/cv.pdf</loc>
+  <lastmod>2022-05-03T07:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
