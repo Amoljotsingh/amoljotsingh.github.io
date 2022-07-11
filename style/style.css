@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background: #1a1a1a;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  color: #ddd;
+  font-family: "Roboto", "NY", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  min-height: 50px;
+}
+
+header a {
+  float: left;
+  font-weight: normal;
+  font-smooth: subpixel-antialiased;
+}
+
+header a h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 5%;
+  float: right;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  vertical-align: baseline;
+}
+
+nav a {
+  padding: 10px;
+  float: left;
+  color: #ddd;
+}
+
+nav label {
+  display: block;
+  padding: 10px;
+  float: right;
+}
+
+nav a:hover {
+  color: #f3bf10;
+  transition: all 0.2s ease-in-out;
+}
+
+a {
+  color: #f3bf10;
+  text-decoration: none;
+}
+
+footer {
+  background: black;
+  margin-top: auto;
+  /* min-height: 50px; */
+  width: 100%;
+  text-align: center;
+}
+
+@font-face {
+  font-family: system-ui, -apple-system, NY, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  src: url("asserts/font/NY.dmg");
+}
+
+.btn {
+  background: #f3bf10;
+  color: black;
+  padding: 10px;
+  border: 2px solid black;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.ribbon {
+  width: 90%;
+  height: 5px;
+  background: #ddd;
+  margin: 0 auto;
+  position: relative;
+}
+
+.single-img {
+  padding: 0 5px 5px;
+  filter: grayscale();
+}
+
+.single-img:hover {
+  filter: grayscale(0);
+  transition: 0.25s;
+}
+
+.grid-container {
+  columns: 5 200px;
+  column-gap: 0.001rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.1rem;
+}
+
+.cv {
+  background: black;
+  padding: 1%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: absolute;
+  bottom: 2%;
+}
+
+.qr {
+  z-index: 1;
+  position: fixed;
+  bottom: 8%;
+  right: 3%;
+  width: 8%;
+}
+
+.banner {
+  position: absolute;
+  display: inline-block;
+  bottom: 18%;
+  width: 100%;
+  padding: 8px;
+  background: #f3bf10;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.banner p {
+  color: #000;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .qr {
+    width: 25%;
+    bottom: 3.5%;
+  }
+
+  #timeNow {
+    display: none;
+  }
+}
