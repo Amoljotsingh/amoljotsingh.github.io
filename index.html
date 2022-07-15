@@ -15,6 +15,10 @@
 
       gtag("config", "G-B0FJ8JHM04");
     </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="author" content="Amoljot Singh" />
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
@@ -72,6 +76,19 @@
         </a>
       </div>
     </main>
+
+    <section class="model">
+      <model-viewer
+        --poster-color="#1a1a1a"
+        alt="Earth 3D model"
+        src="asserts/3d_asserts/earth.glb"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        seamless-poster
+        camera-controls
+        enable-pan
+      ></model-viewer>
+    </section>
 
     <section>
       <img
