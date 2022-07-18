@@ -31,38 +31,36 @@
       name="google-site-verification"
       content="_0RwAfymIXTZed5Sv9zlzpHu8HQ8BVjMPtDYyExgF5k"
     />
-
     <link href="asserts/favicon/favicon-180.png" rel="icon" />
-
     <title>Amoljot Singh</title>
-
     <link href="style/style.css" rel="stylesheet" />
   </head>
 
   <body>
     <header>
       <a href="index.html">
-        <img src="asserts/icons/chess-king.png" />
+        <img alt="chess king icon" src="asserts/icons/chess-king.png" />
       </a>
-
       <a href="index.html">
         <h1>AmolSingh</h1>
       </a>
     </header>
-
-    <nav>
-      <a href="index.html">Home</a>
-
-      <a href="portfolio.html">Portfolio</a>
-
-      <a href="cv.html">About</a>
-
+    <nav id="navigation" class="h-resp-transition">
+      <div class="burger">
+        <img alt="drawer icon" src="asserts/icons/menu-open.png" />
+      </div>
+      <div class="nav-box resp">
+        <a class="active" href="index.html">Home</a>
+        <a href="http://onestructure.herokuapp.com" target="_blank"
+          >OneStructure</a
+        >
+        <a href="gallery.html">Gallery</a>
+        <a href="cv.html">About</a>
+      </div>
       <label id="dateToday">Date: </label>
       <label id="timeNow">Time: </label>
     </nav>
-
     <div class="ribbon"></div>
-
     <main>
       <div class="banner">
         <p>Get my CV from here!</p>
@@ -76,20 +74,22 @@
         </a>
       </div>
     </main>
-
+    <!-- <div>ARCHITECTURE</div> -->
+    <!--fill the background maybe?-->
     <section class="model">
       <model-viewer
         --poster-color="#1a1a1a"
-        alt="Earth 3D model"
+        alt="Earth 3D model 8k"
         src="asserts/3d_asserts/earth.glb"
         ar
         ar-modes="webxr scene-viewer quick-look"
+        camera-orbit="150deg"
         seamless-poster
         camera-controls
-        enable-pan
+        disable-zoom
       ></model-viewer>
+      <!--enable-pan-->
     </section>
-
     <section>
       <img
         class="qr"
@@ -97,11 +97,22 @@
         alt="rick and roll clickbait meme qr code"
       />
     </section>
-
     <div class="footer">
       Renders subject to copyright &#169; Amoljot Singh 2022
     </div>
-
     <script src="js/index.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        let registration;
+
+        const registerServiceWorker = async () => {
+          registration = await navigator.serviceWorker.register(
+            "./service-worker.js"
+          );
+        };
+
+        registerServiceWorker();
+      }
+    </script>
   </body>
 </html>

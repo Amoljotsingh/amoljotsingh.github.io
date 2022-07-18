@@ -6,7 +6,7 @@ body {
   background: #1a1a1a;
   margin: 0;
   color: #ddd;
-  font-family: "Roboto", "NY", sans-serif;
+  font-family: monospace, system-ui, sans-serif;
 }
 
 header {
@@ -36,6 +36,8 @@ header a h1 {
 
 nav {
   width: 100%;
+  height: 6vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   vertical-align: baseline;
@@ -48,15 +50,19 @@ nav a {
   color: #ddd;
 }
 
+nav a:hover {
+  color: #f3bf10;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a.active {
+  color: #f3bf10;
+}
+
 nav label {
   display: block;
   padding: 10px;
   float: right;
-}
-
-nav a:hover {
-  color: #f3bf10;
-  transition: all 0.2s ease-in-out;
 }
 
 a {
@@ -66,16 +72,31 @@ a {
 
 model-viewer {
   background-color: #1a1a1a;
-  padding: 10px;
-  margin: 0 0 15% 0;
   min-width: 50vw;
   min-height: 50vh;
 }
 
-@font-face {
-  font-family: system-ui, -apple-system, NY, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  src: url("asserts/font/NY.dmg");
+.nav-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.single-img {
+  padding: 0 5px 5px;
+  filter: grayscale();
+}
+
+.single-img:hover {
+  filter: grayscale(0);
+  transition: 0.25s;
+}
+
+.grid-container {
+  columns: 5 200px;
+  column-gap: 0.001rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.1rem;
 }
 
 .model {
@@ -93,10 +114,17 @@ model-viewer {
   cursor: pointer;
 }
 
+.btn:hover {
+  background: #ddd;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
 .ribbon {
   width: 90%;
   height: 5px;
   background: #ddd;
+  margin-top: 5px;
   margin: 0 auto;
   position: relative;
 }
@@ -140,10 +168,14 @@ model-viewer {
   font-weight: bold;
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.banner a:hover {
+  background: green;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.burger {
+  display: none;
 }
 
 .card {
@@ -193,13 +225,12 @@ model-viewer {
 .profile-container {
   margin: 10px;
   padding: 10px;
-  text-align: center;
 }
 
 .profile-pic {
   margin: 20px;
   width: 20%;
-  float: right;
+  float: left;
 }
 
 .description {
@@ -213,8 +244,32 @@ model-viewer {
     height: 80vh;
   }
 
-  .model {
-    margin: 0 0 30% 0;
+  .nav-box {
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .h-resp {
+    height: 200px;
+    /* transition: all 0.7s ease-out; */
+  }
+
+  .h-resp-transition {
+    transition: all 0.7s ease-out;
+  }
+
+  .resp {
+    display: none;
+  }
+
+  .burger {
+    display: inline;
+  }
+
+  .footer {
+    font-size: 13px;
   }
 
   .qr {
@@ -224,6 +279,7 @@ model-viewer {
 
   .banner {
     bottom: 20%;
+    font-size: 13px;
   }
 
   .profile-container {
@@ -233,18 +289,14 @@ model-viewer {
   .profile-pic {
     width: 90%;
   }
-
-  #timeNow {
-    display: none;
-  }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 360px) {
   header a h1 {
     font-size: 1.5rem;
   }
 
-  nav label {
+  #timeNow {
     display: none;
   }
 
@@ -258,5 +310,35 @@ model-viewer {
 
   .footer {
     font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 250px), screen and (max-height: 500px) {
+  .qr {
+    display: none;
+  }
+
+  .banner {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 230px), screen and (max-height: 210px) {
+  header {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .ribbon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 125px), screen and (max-height: 130px) {
+  .footer {
+    display: none;
   }
 }

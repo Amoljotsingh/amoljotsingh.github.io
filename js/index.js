@@ -52,6 +52,33 @@ function updateTime() {
   findingTime.innerHTML = timeCalculated;
 }
 
+function navFunction() {
+  var x = document.getElementById("navigation");
+  if (x.className === "navi") {
+    x.className += " responsive";
+  } else {
+    x.className = "navi";
+  }
+}
+
+function resp() {
+  burger = document.querySelector(".burger");
+  navbar = document.querySelector(".nav-box");
+  nav = document.getElementById("navigation");
+  dateLabel = document.getElementById("dateToday");
+  TimeLabel = document.getElementById("timeNow");
+
+  burger.addEventListener("click", () => {
+    navbar.classList.toggle("resp");
+    nav.classList.toggle("h-resp");
+    dateLabel.classList.toggle("resp");
+    TimeLabel.classList.toggle("resp");
+    burger.classList.toggle("resp");
+  });
+}
+
+resp();
+
 setInterval(updateTime, 1000);
 
 updateDate();

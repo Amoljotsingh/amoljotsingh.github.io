@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="return false;">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -28,16 +28,24 @@
   <body style="overflow: auto">
     <header>
       <a href="index.html">
-        <img src="asserts/icons/airballoon.png" />
+        <img alt="chess king icon" src="asserts/icons/airballoon.png" />
       </a>
       <a href="index.html">
         <h1>AmolSingh</h1>
       </a>
     </header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="cv.html">About</a>
+    <nav id="navigation" class="h-resp-transition">
+      <div class="burger">
+        <img alt="drawer icon" src="asserts/icons/menu-open.png" />
+      </div>
+      <div class="nav-box resp">
+        <a href="index.html">Home</a>
+        <a href="http://onestructure.herokuapp.com" target="_blank"
+          >OneStructure</a
+        >
+        <a href="gallery.html">Gallery</a>
+        <a class="active" href="cv.html">About</a>
+      </div>
       <label id="dateToday">Date: </label>
       <label id="timeNow">Time: </label>
     </nav>
@@ -132,18 +140,6 @@
               width="36"
               height="36"
               alt="XD"
-          /></a>
-        </p>
-        Socials
-        <p>
-          <a
-            href="http://www.instagram.com/amoljot.singh"
-            target="_blank"
-            rel="noreferrer"
-            ><img
-              src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/instagram.svg"
-              width="32"
-              height="32"
           /></a>
         </p>
       </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="return false;">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -24,19 +24,32 @@
     <link href="style/book.css" rel="stylesheet" />
   </head>
 
-  <body oncontextmenu="return false;">
+  <body>
     <header>
       <a href="index.html">
-        <img src="asserts/icons/badge-account-horizontal.png" />
+        <img
+          alt="chess king icon"
+          src="asserts/icons/badge-account-horizontal.png"
+        />
       </a>
       <a href="index.html">
         <h1>AmolSingh</h1>
       </a>
     </header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="cv.html">About</a>
+    <nav id="navigation" class="h-resp-transition">
+      <div class="burger">
+        <img alt="drawer icon" src="asserts/icons/menu-open.png" />
+      </div>
+      <div class="nav-box resp">
+        <a href="index.html">Home</a>
+        <a href="http://onestructure.herokuapp.com" target="_blank"
+          >OneStructure</a
+        >
+        <a class="active" href="portfolio.html">Portfolio</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="cv.html">About</a>
+      </div>
+
       <label id="dateToday">Date: </label>
       <label id="timeNow">Time: </label>
     </nav>
@@ -56,21 +69,21 @@
           <p>I am an Architect second,</p>
         </label>
         <label class="page" for="page-3">
-          <p>Software Developer third,</p>
+          <p>a Software Developer third,</p>
         </label>
         <input type="radio" name="page" id="page-5" />
         <label class="page" for="page-7">
-          <p>Designer & and an Engineer later,</p>
+          <p>a Designer & and an Engineer later,</p>
         </label>
         <label class="page" for="page-5">
           <p>But first,</p>
         </label>
         <input type="radio" name="page" id="page-7" />
         <label class="page" for="page-9">
-          <p>I am a...</p>
+          <p>I am...</p>
         </label>
         <label class="page" for="page-7">
-          <p>Curious Kid</p>
+          <p>Just a curious Kid</p>
         </label>
         <input type="radio" name="page" id="page-9" />
         <label class="page cover" for="page-11"></label>
