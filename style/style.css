@@ -1,23 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  background: #1a1a1a;
   margin: 0;
-  background-color: rgb(10, 10, 10);
+  color: #ddd;
+  font-family: monospace, system-ui, sans-serif;
 }
-.header {
-  background-image: url(../asserts/misc/AmoljotSingh.png);
-  height: 100vh;
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-color: red;
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  min-height: 50px;
+  z-index: 10;
 }
+
+header a {
+  float: left;
+  font-weight: normal;
+  font-smooth: subpixel-antialiased;
+  margin: 8px;
+}
+
+header a h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 5%;
+  float: right;
+}
+
+nav {
+  width: 100%;
+  height: 6vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  vertical-align: baseline;
+  z-index: 10;
+}
+
+nav a {
+  padding: 10px;
+  float: left;
+  color: #ddd;
+}
+
+nav a:hover {
+  color: #f3bf10;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a.active {
+  color: #f3bf10;
+}
+
+nav label {
+  display: block;
+  padding: 10px;
+  float: right;
+}
+
+a {
+  color: #f3bf10;
+  text-decoration: none;
+}
+
+model-viewer {
+  background-color: #1a1a1a;
+  min-width: 50vw;
+  min-height: 50vh;
+}
+
+.nav-box {
+  display: flex;
+  flex-direction: row;
+}
+
 .single-img {
   padding: 0 5px 5px;
   filter: grayscale();
 }
+
 .single-img:hover {
   filter: grayscale(0);
   transition: 0.25s;
 }
+
 .grid-container {
   columns: 5 200px;
   column-gap: 0.001rem;
@@ -25,45 +98,37 @@ body {
   margin: 0 auto;
   padding: 1.1rem;
 }
-.designation {
-  background: black;
-  color: white;
-  contain: content;
-  font-size: 2rem;
-  width: 80%;
+
+.model {
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: 10%;
-  border-radius: 10rem;
-  padding: 0.75rem;
+  align-items: center;
 }
-.wrapper {
-  display: flex;
-  justify-content: center;
-}
-.wrapper-nav {
-  display: flex;
-  /* justify-content:space-around; */
-  /* align-items: center; */
-  width: 100vw;
-  background-color: black;
-  padding: 1.5rem;
-  float: left;
-}
-.padded {
-  padding: 1.25rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: white;
-}
-.links {
-  text-decoration: none;
-  color: white;
-  background: red;
+
+.btn {
+  background: #f3bf10;
+  color: black;
   padding: 10px;
-  margin: 1.25rem;
+  border: 2px solid black;
+  font-weight: bolder;
+  cursor: pointer;
 }
+
+.btn:hover {
+  background: #ddd;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.ribbon {
+  width: 90%;
+  height: 5px;
+  background: #ddd;
+  margin-top: 5px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .cv {
   background: black;
   padding: 1%;
@@ -74,4 +139,206 @@ body {
   width: 100vw;
   position: absolute;
   bottom: 2%;
+}
+
+.qr {
+  z-index: 2;
+  position: fixed;
+  bottom: 8%;
+  right: 3%;
+  width: 8%;
+}
+
+.banner {
+  position: fixed;
+  z-index: 1;
+  display: inline-block;
+  bottom: 18%;
+  width: 100%;
+  padding: 3px;
+  background: #f3bf10;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.banner p {
+  color: #000;
+  font-weight: bold;
+}
+
+.banner a:hover {
+  background: green;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.burger {
+  display: none;
+}
+
+.card {
+  background: #fff;
+  height: 300px;
+  width: 250px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.card:hover {
+  transform: rotate(360deg);
+  transition: transform 0.7s ease-in-out;
+}
+
+.card img {
+  width: 90%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+  color: black;
+}
+
+.card button {
+  background: black;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer {
+  background: black;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+
+.profile-container {
+  margin: 10px;
+  padding: 10px;
+}
+
+.profile-pic {
+  margin: 20px;
+  width: 20%;
+  float: left;
+}
+
+.description {
+  padding: 1.1rem;
+  font-size: large;
+}
+
+@media screen and (max-width: 600px) {
+  model-viewer {
+    width: 100vw;
+    height: 80vh;
+  }
+
+  .nav-box {
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .h-resp {
+    height: 200px;
+    /* transition: all 0.7s ease-out; */
+  }
+
+  .h-resp-transition {
+    transition: all 0.7s ease-out;
+  }
+
+  .resp {
+    display: none;
+  }
+
+  .burger {
+    display: inline;
+  }
+
+  .footer {
+    font-size: 13px;
+  }
+
+  .qr {
+    width: 25%;
+    bottom: 3.5%;
+  }
+
+  .banner {
+    bottom: 20%;
+    font-size: 13px;
+  }
+
+  .profile-container {
+    flex-direction: row-reverse;
+  }
+
+  .profile-pic {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  header a h1 {
+    font-size: 1.5rem;
+  }
+
+  #timeNow {
+    display: none;
+  }
+
+  model-viewer {
+    margin: 0 0 25% 0;
+  }
+
+  .banner {
+    font-size: 0.6rem;
+  }
+
+  .footer {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 250px), screen and (max-height: 500px) {
+  .qr {
+    display: none;
+  }
+
+  .banner {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 230px), screen and (max-height: 210px) {
+  header {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .ribbon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 125px), screen and (max-height: 130px) {
+  .footer {
+    display: none;
+  }
 }

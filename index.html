@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap");
-    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -18,44 +15,104 @@
 
       gtag("config", "G-B0FJ8JHM04");
     </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
     <meta charset="UTF-8" />
+    <meta name="author" content="Amoljot Singh" />
     <meta content="width=device-width,initial-scale=1.0" name="viewport" />
     <meta content="Portfolio of Amoljot Singh" name="description" />
-    <meta content="Amoljot, Amoljot Singh, Amol, Amol Singh" name="keywords" />
+    <meta
+      content="Amoljot, Amoljot Singh, Amol, Amol Singh, Amolsingh, AmolSingh"
+      name="keywords"
+    />
     <meta
       name="google-site-verification"
       content="_0RwAfymIXTZed5Sv9zlzpHu8HQ8BVjMPtDYyExgF5k"
     />
-
-    <link href="asserts/misc/icon.jpg" rel="icon" />
-
+    <link href="asserts/favicon/favicon-180.png" rel="icon" />
     <title>Amoljot Singh</title>
-
     <link href="style/style.css" rel="stylesheet" />
   </head>
-  <body class="header" style="overflow: hidden">
-    <header class="wrapper-nav">
-      <div>
-        <a class="padded" href="index.html">Home</a>
-      </div>
-      <div>
-        <a class="padded" href="portfolio.html">Portfolio </a>
-      </div>
-      <div>
-        <a class="padded" href="cv.html">About</a>
-      </div>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img alt="chess king icon" src="asserts/icons/chess-king.png" />
+      </a>
+      <a href="index.html">
+        <h1>AmolSingh</h1>
+      </a>
     </header>
+    <nav id="navigation" class="h-resp-transition">
+      <div class="burger">
+        <img alt="drawer icon" src="asserts/icons/menu-open.png" />
+      </div>
+      <div class="nav-box resp">
+        <a class="active" href="index.html">Home</a>
+        <a href="http://onestructure.herokuapp.com" target="_blank"
+          >OneStructure</a
+        >
+        <a href="gallery.html">Gallery</a>
+        <a href="cv.html">About</a>
+      </div>
+      <label id="dateToday">Date: </label>
+      <label id="timeNow">Time: </label>
+    </nav>
+    <div class="ribbon"></div>
     <main>
-      <div class="cv">
-        <p style="color: white; font-size: large">Get my CV from here!</p>
+      <div class="banner">
+        <p>Get my CV from here!</p>
         <a
-          class="links"
           href="downloads/cv.pdf"
           download="downloads/cv.pdf"
           target="__blank__"
-          >Download
+          class="btn"
+        >
+          Download
         </a>
       </div>
     </main>
+    <!-- <div>ARCHITECTURE</div> -->
+    <!--fill the background maybe?-->
+    <section class="model">
+      <model-viewer
+        --poster-color="#1a1a1a"
+        alt="Earth 3D model 8k"
+        src="asserts/3d_asserts/earth.glb"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-orbit="150deg"
+        seamless-poster
+        camera-controls
+        disable-zoom
+      ></model-viewer>
+      <!--enable-pan-->
+    </section>
+    <section>
+      <img
+        class="qr"
+        src="asserts/QR-code/frame.png"
+        alt="rick and roll clickbait meme qr code"
+      />
+    </section>
+    <div class="footer">
+      Renders subject to copyright &#169; Amoljot Singh 2022
+    </div>
+    <script src="js/index.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        let registration;
+
+        const registerServiceWorker = async () => {
+          registration = await navigator.serviceWorker.register(
+            "./service-worker.js"
+          );
+        };
+
+        registerServiceWorker();
+      }
+    </script>
   </body>
 </html>
