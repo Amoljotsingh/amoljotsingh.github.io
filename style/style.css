@@ -81,22 +81,27 @@ model-viewer {
   flex-direction: row;
 }
 
+.grid-container {
+  columns: 5 300px;
+  column-gap: 0.001rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.1rem;
+}
+
 .single-img {
   padding: 0 5px 5px;
   filter: grayscale();
 }
 
+.single-img img {
+  width: 100%;
+  border-radius: 1%;
+}
+
 .single-img:hover {
   filter: grayscale(0);
   transition: 0.25s;
-}
-
-.grid-container {
-  columns: 5 200px;
-  column-gap: 0.001rem;
-  width: 90%;
-  margin: 0 auto;
-  padding: 1.1rem;
 }
 
 .model {
